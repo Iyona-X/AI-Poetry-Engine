@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
     display: flex;
@@ -28,7 +28,7 @@ body {
 .header h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #2d3748;
+    color: #FFC0CB;
     letter-spacing: -0.5px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 .topic-input:focus {
     outline: none;
-    border-color: #7c3aed;
+    border-color: #FADADD;
 }
 
 .topic-input::placeholder {
@@ -72,7 +72,7 @@ body {
 
 .submit-btn {
     padding: 14px 32px;
-    background: #7c3aed;
+    background: #FFD1DC;
     color: white;
     border: none;
     border-radius: 8px;
@@ -84,9 +84,9 @@ body {
 }
 
 .submit-btn:hover {
-    background: #6d28d9;
+    background: #FFB6C1;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 12px rgba(237, 58, 147, 0.3);
 }
 
 .submit-btn:active {
@@ -100,7 +100,7 @@ body {
     box-shadow: none;
 }
 
-/* Style Section */
+
 .style-section {
     padding-top: 20px;
     border-top: 1px solid #e2e8f0;
@@ -137,9 +137,9 @@ body {
 }
 
 .style-tag.active {
-    background: #7c3aed;
+    background: #FFB6C1;
     color: white;
-    border-color: #7c3aed;
+    border-color: #FFB6C1;
 }
 
 
