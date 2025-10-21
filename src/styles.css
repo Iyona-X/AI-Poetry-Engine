@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2d3748;
+    letter-spacing: -0.5px;
+}
+
+
+.main-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    padding: 40px;
+}
+
+
+.input-section {
+    margin-bottom: 0;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.topic-input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.2s;
+}
+
+.topic-input:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
+
+.topic-input::placeholder {
+    color: #a0aec0;
+}
+
+.submit-btn {
+    padding: 14px 32px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.submit-btn:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Style Section */
+.style-section {
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.style-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+.style-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.style-tag {
+    padding: 8px 16px;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.style-tag:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+.style-tag.active {
+    background: #7c3aed;
+    color: white;
+    border-color: #7c3aed;
+}
+
+
+.poem-output {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    animation: fadeIn 0.4s ease-in;
+}
+
+.poem-output.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poem-text {
+    padding: 24px;
+    background: #f7fafc;
+    border-left: 4px solid #7c3aed;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.poem-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2d3748;
+    font-style: italic;
+    white-space: pre-line;
+}
+
+.copy-btn {
+    padding: 10px 20px;
+    background: transparent;
+    color: #7c3aed;
+    border: 1px solid #7c3aed;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #7c3aed;
+    color: white;
+}
+
+.copy-btn.copied {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 24px;
+    padding: 16px;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #718096;
+}
+
+.footer-link {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #6d28d9;
+    text-decoration: underline;
+}
+
+
+.submit-btn.loading {
+    background: #cbd5e0;
+    cursor: wait;
+}
+
+.submit-btn.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60%,
+    100% {
+        content: '...';
+    }
+}
+
+
+@media (max-width: 640px) {
+    .main-card {
+        padding: 24px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .style-buttons {
+        gap: 6px;
+    }
+
+    .style-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/styles.css">
+        <title> AI-POETRY ENGINE</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>AI Poem Generator</h1>
+            </header>
+
+
+            <div class="main-card">
+
+                <form id="poemForm" class="input-section">
+                    <div class="input-wrapper">
+                        <input type="text" id="topic" class="topic-input" placeholder="Enter the topic of your poem"
+                            required>
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Submit
+                        </button>
+                    </div>
+
+                    <div class="style-section">
+                        <label class="style-label">Choose poem style:</label>
+                        <div class="style-buttons">
+                            <button type="button" class="style-tag active" data-style="inspirational">
+                                Inspirational
+                            </button>
+                            <button type="button" class="style-tag" data-style="motivational">
+                                Motivational
+                            </button>
+                            <button type="button" class="style-tag" data-style="philosophical">
+                                Philosophical
+                            </button>
+                            <button type="button" class="style-tag" data-style="romantic">
+                                Romantic
+                            </button>
+                            <button type="button" class="style-tag" data-style="funny">
+                                Funny
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <Poem Output>
+                    <div class="poem-output hidden" id="poemOutput">
+                        <div class="poem-text" id="poemText"></div>
+                        <button class="copy-btn" id="copyBtn">
+                            Copy to clipboard
+                        </button>
+                    </div>
+            </div>
+
+            <Footer>
+            This AI project was coded by
+            <a href="https://github.com/Iyona-X" target="_blank">Iyona Ximba</a>
+            and is open sourced on
+            <a href="https://github.com/Iyona-X/AI-Poetry-Engine" target="_blank">GitHub</a>
+            and hosted on
+            <a href="" target="_blank">Netlify</a>
+                    
+        </div>
+
+        <script src="api.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
